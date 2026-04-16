@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 数组reduce方法
+      // arr.reduce(function(上一次的值, 当前值){}, initValue)
+      const arr = [1, 2, 3, 4];
+
+      // 1. 没有初始值
+      const sum = arr.reduce(function (prev, current) {
+        return prev + current;
+      });
+      console.log(sum);
+
+      // 上一次值    当前值     返回值（第一次循环）
+      // 1           2         3
+      // 上一次值    当前值     返回值（第二次循环）
+      // 3           3         6
+      // 上一次值    当前值     返回值（第三次循环）
+      // 6           4         10
+
+      // 2.有初始值
+      const sum1 = arr.reduce(function (prev, current) {
+        return prev + current;
+      }, 1);
+      console.log(sum1);
+
+      // 上一次值    当前值     返回值（第一次循环）
+      // 1           1         2
+      // 上一次值    当前值     返回值（第二次循环）
+      // 2           2         4
+      // 上一次值    当前值     返回值（第三次循环）
+      // 4           3         7
+      // 上一次值    当前值     返回值（第四次循环）
+      // 7           4         11
+
+      // 3.箭头函数的写法
+      const sum2 = arr.reduce((prev, current) => prev + current, 1);
+      console.log(sum2);
+
+      // 综合案例
+      const arr1 = [
+        { name: "zf", age: 18 },
+        { name: "zf1", age: 19 },
+        { name: "zf2", age: 20 },
+      ];
+      const sumAge = arr1.reduce((prev, current) => prev + current.age, 0);
+      console.log(sumAge);
+    </script>
+  </body>
+</html>

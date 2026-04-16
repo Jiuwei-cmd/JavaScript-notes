@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 基本包装类型
+      // 1. 基本包装类型：String、Number、Boolean、Symbol、Big-----发现基本数据类型也有属性和方法，是因为他们内部进行了一次包装
+
+      // const str = "dog";
+      // console.log(str.length);
+      // console.log(str.toUpperCase());
+
+      // 实际上是这样执行的 js 底层完成， 把简单数据类型包装为了引用数据类型
+      const str = new String("dog");
+      console.log(str.length);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 实例成员和静态成员
+      // 1. 实例成员：通过构造函数创建出来的对象身上的属性和方法叫做实例成员
+      // 为构造函数传入参数，创建结构相同但值不同的对象
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      const p1 = new Person("zf", 18);
+      p1.name = "zf1";
+      p1.sayHello = function () {
+        console.log("hello");
+      };
+      console.log(p1);
+      console.log(p1.sayHello);
+      p1.sayHello();
+
+      const p2 = new Person("zf", 19);
+      console.log(p1 === p2);
+
+      // 2. 静态成员：构造函数上的属性和方法称为静态成员
+      function Pig(name, age) {
+        this.name = name;
+      }
+
+      Pig.eyes = 2;
+      Pig.sayHi = function () {
+        console.log(this);
+      };
+      console.log(Pig.eyes);
+      Pig.sayHi();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. split 将字符串分割成数组，返回一个新数组
+      const str = "hello,world";
+      const arr = str.split(",");
+      console.log(arr);
+
+      // 2. 字符串的截取 substring(start, end) 截取字符串，返回一个新字符串
+      const str1 = "今天要做核算";
+      const str2 = str1.substring(3);
+      console.log(str2);
+
+      // 3. startsWith 判断字符串是否以某个字符串开头，返回布尔值
+      const str3 = "hello,world";
+      const re = str3.startsWith("hello");
+      console.log(re);
+
+      // 4. endsWith 判断字符串是否以某个字符串结尾，返回布尔值
+      const str4 = "hello,world";
+      const re1 = str4.endsWith("world");
+      console.log(re1);
+
+      // 5. includes 判断字符串是否包含某个字符串，返回布尔值
+      const str5 = "hello,world";
+      const re2 = str5.includes("world");
+      console.log(re2);
+
+      // 6. toLowerCase 将字符串转换成小写，返回一个新字符串
+      const str6 = "HELLO, WORLD";
+      const str7 = str6.toLowerCase();
+      console.log(str7);
+
+      // 7. toUpperCase 将字符串转换成大写，返回一个新字符串
+      const str8 = "hello, world";
+      const str9 = str8.toUpperCase();
+      console.log(str9);
+
+      // 8. indexOf 查找字符串中某个字符串的位置，返回一个整数，如果没有找到则返回 -1
+      const str10 = "hello,world";
+      const re3 = str10.indexOf("world");
+      console.log(re3);
+
+      // 9. replace 替换字符串中某个字符串，返回一个新字符串
+      const str11 = "hello,world";
+      const str12 = str11.replace("world", "zf");
+      console.log(str12);
+
+      // 10. match 查找字符串中符合正则表达式的字符串，返回一个数组，如果没有找到则返回 null
+      const str13 = "hello,world";
+      const re4 = str13.match(/l/g);
+      console.log(re4);
+    </script>
+  </body>
+</html>

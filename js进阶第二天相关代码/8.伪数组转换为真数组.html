@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <script>
+      // 获取所有的li元素
+      const lis1 = document.querySelectorAll("li");
+      // 将伪数组转换为真数组
+      const lis2 = Array.from(lis1);
+      console.log(lis2);
+      lis2.pop();
+      console.log(lis2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [
+        {
+          name: "小米",
+          price: 1999,
+        },
+        {
+          name: "华为",
+          price: 3999,
+        },
+      ];
+      // 1.forEach 循环数组元素，返回 undefined
+      arr.forEach((item) => console.log(item));
+      arr.forEach((item) => {
+        item.price += 100;
+      });
+      console.log(arr);
+
+      // 2.map 循环数组元素，返回一个新数组
+      const newArr = arr.map((item) => item.name);
+      console.log(newArr);
+
+      // 3.filter 筛选数组元素，返回一个新数组
+      const newArr1 = arr.filter((item) => item.price > 3000);
+      console.log(newArr1);
+
+      // 4.join 将数组元素转换成字符串，返回一个字符串
+      const str = arr.map((item) => item.name).join("-");
+      console.log(str);
+
+      // 5.find 查找元素， 返回符合测试条件的第一个数组元素值，如果没有符合条件的则返回 undefined
+      const re = arr.find((item) => item.name === "小米");
+      console.log(re);
+
+      // 6.every 测试数组元素是否都符合测试条件，返回一个布尔值
+      const re1 = arr.every((item) => item.price > 1000);
+      console.log(re1);
+      const re2 = [1, 2, 3, 4, 5].every((item) => item > 3);
+      console.log(re2);
+
+      // 7.some 测试数组元素是否至少有一个符合测试条件，返回一个布尔值
+      const re3 = arr.some((item) => item.price > 3000);
+      console.log(re3);
+
+      // 8.contat 合并两个数组，返回一个新数组
+      const arr1 = [1, 2, 3];
+      const arr2 = [4, 5, 6];
+      const arr3 = arr1.concat(arr2);
+      console.log(arr3);
+
+      // 9.sort 对数组元素进行排序，返回一个新数组
+      const arr4 = [3, 1, 4, 2, 5];
+      const arr5 = arr4.sort((a, b) => b - a);
+      console.log(arr5);
+
+      // 10.splice 删除数组元素，返回被删除的元素
+      const arr6 = [1, 2, 3, 4, 5];
+      const arr7 = arr6.splice(2, 1);
+      console.log(arr6, arr7);
+
+      // 11.reverse 反转数组元素，返回一个新数组
+      const arr8 = [1, 2, 3, 4, 5, 6];
+      const arr9 = arr8.reverse();
+      console.log(arr9);
+
+      // 12.findIndex 查找元素，返回符合测试条件的第一个数组元素的索引，如果没有符合条件的则返回 -1
+      const arr11 = [1, 2, 3, 4, 5];
+      const re5 = arr11.findIndex((item) => item === 3);
+      console.log(re5);
+    </script>
+  </body>
+</html>

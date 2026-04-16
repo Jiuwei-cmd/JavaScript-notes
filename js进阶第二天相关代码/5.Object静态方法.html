@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const o = { name: "zf", age: 18 };
+      // 1. 获取对象所有的键
+      console.log(Object.keys(o));
+      // 2. 获取对象所有的值
+      console.log(Object.values(o));
+      // 3. 拷贝对象、添加属性
+      // const oo = {};
+      // Object.assign(oo, o);
+      // console.log(oo);
+      Object.assign(o, { uname: "zf1", height: 1.88 });
+      console.log(o);
+    </script>
+  </body>
+</html>

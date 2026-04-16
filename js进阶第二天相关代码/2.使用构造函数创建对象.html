@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 构造函数是一种特殊的函数，专门用来创建对象的
+      // 主要用来简化创建对象的过程
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      // 构造函数的返回值是一个对象，
+      // 但是，构造函数的返回值并不影响创建出来的对象
+      const p = new Person("zf", 18);
+      console.log(p);
+      console.log(p instanceof Person); // true
+      console.log(p instanceof Object); // true
+      console.log(p instanceof Array); // false
+      console.log(p instanceof Function); // false
+      console.log(p instanceof RegExp); // false
+
+      function Goods(name, price, count) {
+        this.name = name;
+        this.price = price;
+        this.count = count;
+      }
+
+      const xiaomi = new Goods("小米", 1999, 10);
+      const huawei = new Goods("华为", 1999, 10);
+      const vivo = new Goods("vivo", 1999, 10);
+
+      console.log(xiaomi, huawei, vivo);
+    </script>
+  </body>
+</html>
