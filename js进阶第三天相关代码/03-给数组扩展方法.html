@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const arr = [1, 2, 3];
+      const arr = new Array(1, 2, 3);
+      // 1.通过原型对象给数组添加一个求和的方法
+      Array.prototype.sum = function () {
+        let total = 0;
+        for (let i = 0; i < this.length; i++) {
+          total += this[i];
+        }
+        return total;
+      };
+      console.log(arr.sum());
+
+      // 2.通过原型对象给数组添加一个求最大值的方法
+      Array.prototype.max = function () {
+        return Math.max(...this);
+      };
+      console.log(arr.max());
+    </script>
+  </body>
+</html>

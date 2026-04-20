@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 构造函数  公共的属性和方法 封装到 Star 构造函数里面了
+      // 1. 公共的属性写到 构造函数里面
+      function Star(name, age) {
+        this.name = name;
+        this.age = age;
+        // this.show = function () {
+        //   console.log("唱歌");
+        // };
+      }
+      // 2. 公共的方法写到 Star.prototype 对象里面
+      Star.prototype.show = function () {
+        console.log(this.name + "唱歌");
+      };
+      const ldh = new Star("ldh1", 18);
+      const zxy = new Star("zxy", 88);
+      ldh.show();
+      console.log(ldh.show === zxy.show);
+
+      console.log(Star.prototype);
+    </script>
+  </body>
+</html>
