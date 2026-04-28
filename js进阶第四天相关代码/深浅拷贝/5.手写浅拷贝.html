@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        uname: "pink",
+        age: 18,
+      };
+      const o = {};
+      function deepCopy(newObj, oldObj) {
+        for (let k in oldObj) {
+          newObj[k] = oldObj[k];
+        }
+      }
+      deepCopy(o, obj);
+      o.age = 80;
+      console.log(o);
+    </script>
+  </body>
+</html>
